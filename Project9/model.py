@@ -86,7 +86,7 @@ class Resnet18Decoder(nn.Module):
         #print(x.size())
         x = self.convtrans2(self.bn2(F.relu(x)))
 #         x1 = F.pad(x1, (3, 4, 4, 3, 0, 0, 0, 0), mode='constant', value=0)
-        x = x[:,:,3:123,3:163]
+        x = x[:,:,3:123,4:164]
         # print(x.size(), x1.size())
         x = torch.cat((x, x1), dim=1)
         #print(x.size())
